@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Free Writer</title>
+  <meta name="description" content="Write your text freely.">
+  <meta name="author" content="SitePoint">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="css/style.css?v=1.0">
+  <script src="js/script.js"></script>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+	<div id = "title">
+		<div id = "border">
+	  	<h3>Free Writer</h3> 
+	  	</div>
+  	</div>
+
+  	<div id = "aboutLink">
+  		<a href="about.html">About</a>
+  	</div>
+
+  	<div id = "menuButtons">
+  		<input type="button" value="B" onclick="mod_selection('[b]','[/b]')" />
+  		<input type="button" value="I" onclick="mod_selection('[i]','[/i]')" />
+ 		<input type="button" value="U" onclick="mod_selection('[u]','[/u]')" />
+  	</div>
+
+  	<div id = "fontBar">
+    	<input type="button" value="lft" onclick="leftTextAlign()"/>
+  		<input type="button" value="cntr" onclick="centerTextAlign()"/>
+  		<input type="button" value="rght" onclick="rightTextAlign()"/>
+    	<!--  <input type="button" value="+" onclick="increaseFontSize"/>
+  		<input type="button" value="-" onclick="decreaseFontSize"/> -->
+  	</div>
+
+  	<div id = "specialMenuButtons">
+  		<input type="button" value="single-space" onclick="singleSpaceOn()"/>
+  	</div>
+
+  	<div id = "specialMenuButtons1">
+   		<input type="button" value="double-space" onclick="doubleSpaceOn()"/>
+  	</div>
+
+ 	<div id = "largerMenuButtons">
+  		<input type="button" value="secure" onclick="scrambleText()" />
+  	</div>
+
+	<div id = "largerMenuButtons1">
+  		<input type="button" value="visible" onclick="unscrambleText()" />
+  	</div>
+
+	<div id = "eraseButton">
+  		<input type="button" value="erase" onclick="eraseAll()" />
+	</div>
+
+	<div id = "textWritten"> 
+	</div>
+
+	<div id = "textScrambled"> 
+	</div>
+
+  	<div id = "textInput">
+      <textarea class="textWrite" id="myText" onkeydown = "handleKeyDown(event)" onkeypress ="handleKeyPress(event);"></textarea>
+  	</div>
+
+  	<div id = "textInputButton"> 
+	  <input type="button" value="enter" onclick="textInput()"/>
+  	</div>
+
+   	<div id = "clearButton"> 
+	  <input type="button" value="clear" onclick="clearText()"/>
+	</div>  	
+
+</body>
+</html>

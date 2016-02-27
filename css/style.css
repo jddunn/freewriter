@@ -1,0 +1,157 @@
+#title {
+   margin-top: 4%;
+   text-align : center;
+   font-size: 250%;
+   margin-left: 0%;
+   /*border-bottom: 1px solid #ADADAD;*/
+}
+
+body {
+	background-color: #fefdfb;
+}
+ 
+#aboutLink {
+	font-size: 120%;
+	margin-top: .7%;
+	padding-left: 80%;
+	margin-left: 3.0%;
+	padding-bottom: 2%;
+	padding-right: 5%;
+}
+
+a {
+   color:black;
+}
+
+a:visited { text-decoration: none; color:black; }
+a:hover { text-decoration: none; color:red; }
+a:focus { text-decoration: none; color:black; }
+a:hover, a:active { text-decoration: none; color:black }
+
+
+#backLink {
+	text-align: center;
+	margin-top: 5%;
+	font-size: 150%;
+}
+
+#paragraphText {
+	text-align: center;
+	margin-left: 17%;
+	margin-top: 4%;
+	font-size: 125%;
+	width: 62%;
+}
+
+#paragraphText1 {
+	text-align: center;
+	margin-left: 17%;
+	margin-top: 2%;
+	font-size: 125%;
+	width: 62%;
+}
+
+#paragraphText2 {
+	text-align: center;
+	margin-left: 17%;
+	margin-top: 2%;
+	font-size: 125%;
+	width: 62%;
+}
+
+#menuButtons {
+	margin-top: -2%;
+	margin-left: 83%;
+	padding-top: 2%;
+	padding-right: 5%;
+}
+
+#largerMenuButtons {
+	margin-top: -.5%;
+	margin-left: 83%;
+	padding-top: 1.1%;
+	padding-right: 5%;
+	padding-bottom: .4%;
+}
+
+#largerMenuButtons1 {
+	margin-left: 83%;
+	padding-top: .3%;
+	padding-right: 5%;
+}
+
+#fontBar {
+	margin-left: 83%;
+	padding-top:2.2%;
+	padding-bottom:.55%;
+}
+
+#specialMenuButtons {
+	margin-left: 83%;
+	padding-right: 5%;
+	padding-top: 1.5%;
+	padding-bottom: .4%;
+}
+
+#specialMenuButtons1 {
+	margin-left: 83%;
+	padding-right: 5%;
+	margin-top: -.25%;
+	padding-top: .4%;
+	padding-bottom: 1.5%;
+}
+
+#specialMenuButtons {
+}
+
+#eraseButton {
+	margin-left: 83.0%;
+	margin-top: 2%;
+	padding-right: 5%;
+}
+
+.textWrite {
+	margin-top: 1%;
+    margin-left: 13%;
+   	width: 62%;
+    height: 53px;
+    font-size: 120%;
+}
+
+#textInputButton {
+	margin-left: 76.3%;
+	margin-top: -4.5%;
+}
+
+#clearButton {
+	padding-top: 1.11%;
+	margin-left: 76.3%;
+}
+
+.textInput {
+	width: 55%;
+	height: 50%;
+	font-size: 120%;
+}
+
+#textWritten {
+	width: 66%;
+	font-size: 120%;
+	margin-top: -22.25%;
+	margin-left: 13%;
+	height: 415px;
+    resize: none;
+    overflow: scroll;
+}
+
+#textScrambled {
+	display: none;
+	width: 66%;
+	font-size: 120%;
+	margin-top: -22.25%;
+	margin-left: 13%;
+	height: 415px;
+    resize: none;
+    overflow: scroll;
+}
+

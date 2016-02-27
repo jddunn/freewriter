@@ -117,7 +117,7 @@ a:hover, a:active { text-decoration: none; color:black }
    	width: 62%;
     height: 53px;
     font-size: 120%;
-    resize: both;
+    resize: vertical;
 }
 
 #textInputButton {
@@ -142,8 +142,9 @@ a:hover, a:active { text-decoration: none; color:black }
 	margin-top: -22.25%;
 	margin-left: 13%;
 	height: 415px;
-    /*resize: both;*/
+    resize: vertical;
     overflow: scroll;
+    overflow-y: hidden;
 }
 
 #textScrambled {
@@ -153,7 +154,8 @@ a:hover, a:active { text-decoration: none; color:black }
 	margin-top: -22.25%;
 	margin-left: 13%;
 	height: 415px;
-    /*resize: both;*/
+    resize: vertical;
     overflow: scroll;
+    overflow-y: hidden;
 }
 

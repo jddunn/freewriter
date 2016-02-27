@@ -158,7 +158,6 @@ a:hover, a:active { text-decoration: none; color:black }
 }
 
 #textScrambled {
-	text-align: center;
 	display: none;
 	width: 66%;
 	font-size: 120%;

@@ -76,6 +76,7 @@ function handleKeyPress(e){				//	Did the user hit enter / return?
 	var key=e.keyCode || e.which;
   	if (key==13){
     	//scrambler();
+    	scrollDown();
     	textInput();						//	If so, send the current message the user is typing
      	return false;
    }
@@ -85,8 +86,12 @@ function handleKeyPress(e){				//	Did the user hit enter / return?
 function handleKeyDown(e){				//	Did the user hit the control button?
 	if (e.ctrlKey && scrambleTextOn == true) {
     	unscrambleText();					//	If so, scramble or unscramble the text
+    	scrollDown();
+    	return false;
    	} else if (e.ctrlKey && scrambleTextOn == false) {
     	scrambleText();
+    	scrollDown();
+    	return false;
    }
 }
 
@@ -153,7 +158,7 @@ function scrambler () {						//	Scrambles all the text on the page except for wh
 	var printThisScrambledLength = printThisScrambled.length;
 	for (var i=0; i<printThisScrambledLength; i++) {
 		 // whatsThisTextScrambled = scrambledTextArea.toString();
-		 var charIndex = Math.floor(Math.random() * printThisScrambledLength);
+		 var charIndex = Math.floor(Math.random() * printThisScrambledLength/1.5);
 		 //console.log(whatsThisTextScrambled.length)
 	 	    //var textToBeScrambled = whatsThisText;
          	scrambled += printThisScrambled.charAt(charIndex);
@@ -163,15 +168,22 @@ function scrambler () {						//	Scrambles all the text on the page except for wh
               // console.log(printThisScrambled);
 			if (!doubleSpacedOn) {
 				scrambled = String(scrambled);
-				scrambled +=  "<br>" + scrambled;
+				scrambled =  "<br>" + scrambled;
 				} else {
 				scrambled = String(scrambled);
-				scrambled += "<br>" + "<br>" + scrambled;
+				scrambled = "<br>" + "<br>" + scrambled;
 				}
 		     return scrambled;
 }
 
 
+function scrollDown () {
+	var textArea = document.getElementById('textWritten');
+	var scrambledTextArea = document.getElementById('textScrambled');
+	textArea.scrollTop = textArea.scrollHeight;
+	scrambledTextArea.scrollTop = scrambledTextArea.scrollHeight;
+	return true;
+}
 
 function eraseAll () {					//	Clears all the text from the page
 	printThisScrambled = "";

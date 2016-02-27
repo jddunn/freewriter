@@ -10,6 +10,16 @@ body {
 	background-color: #fefdfb;
 }
  
+#githubLink{
+	font-size: 120%;
+	margin-top: 2%;
+	padding-left: 80%;
+	margin-left: -39.0%;
+	padding-bottom: 2%;
+	padding-right: 5%;
+}
+
+
 #aboutLink {
 	font-size: 120%;
 	margin-top: .7%;
@@ -32,7 +42,7 @@ a:hover, a:active { text-decoration: none; color:black }
 #backLink {
 	text-align: center;
 	margin-left: -5%;
-	margin-top: 5%;
+	margin-top: 1%;
 	font-size: 150%;
 }
 

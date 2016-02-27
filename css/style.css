@@ -144,7 +144,7 @@ a:hover, a:active { text-decoration: none; color:black }
 	height: 415px;
     resize: vertical;
     overflow: scroll;
-    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 #textScrambled {
@@ -156,6 +156,6 @@ a:hover, a:active { text-decoration: none; color:black }
 	height: 415px;
     resize: vertical;
     overflow: scroll;
-    overflow-y: hidden;
+    overflow-x: hidden;
 }
 

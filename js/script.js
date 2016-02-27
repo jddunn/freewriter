@@ -15,16 +15,20 @@ http://stackoverflow.com/questions/14945371/using-loops-to-create-a-word-scrambl
 */
 
 var fullTextArea = [];			//	The full text that the user has been writing
+var scrambledTextArea = [];
 var doubleSpacedOn = false;		//	Double-spacing?
 var scrambleTextOn = false;		//	Does the user want the text on the page to be scrambled?
-var scrambled = "";				
 var textArea;					//	The text that the user is currently inputting 
+
+var scrambledString = "";
 
 var charLength = 0;				
 var charLengthCount = 0;
 var fullTextAreaLength;			//	How much text has been written already?
 var printThis;					//	Print the last inputted text from the user on the page
-var printThisScrambled;			//	Reprint all the text on the page as scrambled text
+var printThisScrambled;			//	Adding the final touches to the super long string to be printed
+var scrambled = "";				//	The final scrambled string that will be printed in place of the normal text
+
 
 function textInput() {
     // var textWriter = document.getElementById('myText');
@@ -57,11 +61,12 @@ function textInput() {
    	document.getElementById('myText').value = '';	   	//	Resets the entry box.
 
    	fullTextArea.push(text);				//	Add text to the array
+   	scrambledTextArea.push(text);
    	if (!scrambleTextOn) {
-   		document.getElementById('textScrambled').innerHTML = "";		//	Clear the scrambled text
+   		// document.getElementById('textScrambled').innerHTML = "";		//	Clear the scrambled text
    		document.getElementById('textWritten').innerHTML = addText();
    	} else {		
-   		document.getElementById('textWritten').innerHTML = "";			//	Clear the normal text 
+   		// document.getElementById('textWritten').innerHTML = "";			//	Clear the normal text 
    		document.getElementById('textScrambled').innerHTML = scrambler();	
    	}
 }
@@ -70,6 +75,7 @@ function textInput() {
 function handleKeyPress(e){				//	Did the user hit enter / return?
 	var key=e.keyCode || e.which;
   	if (key==13){
+    	//scrambler();
     	textInput();						//	If so, send the current message the user is typing
      	return false;
    }
@@ -100,8 +106,6 @@ function addText () {					//	Add the user's current message to the rest of the t
 	printThis = "";
 	fullTextAreaLength = fullTextArea.length;
 	for (var i=0; i<fullTextAreaLength; i++) {
-		whatsThisText = fullTextArea[i];
-		charLength = whatsThisText.length; 
 		if (!doubleSpacedOn) {
 			printThis += "<br>" + fullTextArea[i];	
 		} else {
@@ -139,25 +143,34 @@ function rightTextAlign () {
 
 
 function scrambler () {						//	Scrambles all the text on the page except for what the uesr is
-	printThisScrambled = "";			//	currently typing
-	for (var i = 0; i<fullTextAreaLength; i++) {
-		whatsThisText = fullTextArea[i] + whatsThisText;
-			//  + whatsThisText;
-			// + whatsThisText;
-			//fullTextArea[i] = 0;
-			// for (var i = 0; i < fullTextAreaLength; i++) {}
-		    var charIndex = Math.floor(Math.random() * whatsThisText.length);
-		    var textToBeScrambled = whatsThisText;
-        	scrambled += textToBeScrambled.charAt(charIndex);
-        	textToBeScrambled = textToBeScrambled.substr(0, charIndex) + textToBeScrambled.substr(charIndex + 1);
+	printThisScrambled = printThis;			//	currently typing
+	// console.log(printThisScrambled);
+	
+	// scrambledTextAreaLength = scrambledTextArea.length;
+	// console.log(fullTextArea);
+	// console.log(scrambledTextArea);
+	// console.log(printThis);
+	var printThisScrambledLength = printThisScrambled.length;
+	for (var i=0; i<printThisScrambledLength; i++) {
+		 // whatsThisTextScrambled = scrambledTextArea.toString();
+		 var charIndex = Math.floor(Math.random() * printThisScrambledLength);
+		 //console.log(whatsThisTextScrambled.length)
+	 	    //var textToBeScrambled = whatsThisText;
+         	scrambled += printThisScrambled.charAt(charIndex);
+         	// console.log(scrambled);
+         	printThisScrambled =  printThisScrambled.substr(0, charIndex) + printThisScrambled.substr(charIndex + 1);
+         }
+              // console.log(printThisScrambled);
 			if (!doubleSpacedOn) {
-				printThisScrambled +=  "<br>" + scrambled;
+				scrambled = String(scrambled);
+				scrambled +=  "<br>" + scrambled;
 				} else {
-				printThisScrambled += "<br>" + "<br>" + scrambled;
+				scrambled = String(scrambled);
+				scrambled += "<br>" + "<br>" + scrambled;
 				}
-			}
-	return printThisScrambled;
+		     return scrambled;
 }
+
 
 
 function eraseAll () {					//	Clears all the text from the page

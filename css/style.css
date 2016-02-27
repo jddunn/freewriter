@@ -2,7 +2,7 @@
    margin-top: 4%;
    text-align : center;
    font-size: 250%;
-   margin-left: 0%;
+   margin-left: -8%;
    /*border-bottom: 1px solid #ADADAD;*/
 }
 
@@ -31,13 +31,14 @@ a:hover, a:active { text-decoration: none; color:black }
 
 #backLink {
 	text-align: center;
+	margin-left: -5%;
 	margin-top: 5%;
 	font-size: 150%;
 }
 
 #paragraphText {
 	text-align: center;
-	margin-left: 17%;
+	margin-left: 15.5%;
 	margin-top: 4%;
 	font-size: 125%;
 	width: 62%;
@@ -45,7 +46,7 @@ a:hover, a:active { text-decoration: none; color:black }
 
 #paragraphText1 {
 	text-align: center;
-	margin-left: 17%;
+	margin-left: 15.5%;
 	margin-top: 2%;
 	font-size: 125%;
 	width: 62%;
@@ -53,7 +54,7 @@ a:hover, a:active { text-decoration: none; color:black }
 
 #paragraphText2 {
 	text-align: center;
-	margin-left: 17%;
+	margin-left: 15.5%;
 	margin-top: 2%;
 	font-size: 125%;
 	width: 62%;
@@ -116,6 +117,7 @@ a:hover, a:active { text-decoration: none; color:black }
    	width: 62%;
     height: 53px;
     font-size: 120%;
+    resize: both;
 }
 
 #textInputButton {
@@ -140,7 +142,7 @@ a:hover, a:active { text-decoration: none; color:black }
 	margin-top: -22.25%;
 	margin-left: 13%;
 	height: 415px;
-    resize: none;
+    /*resize: both;*/
     overflow: scroll;
 }
 
@@ -151,7 +153,7 @@ a:hover, a:active { text-decoration: none; color:black }
 	margin-top: -22.25%;
 	margin-left: 13%;
 	height: 415px;
-    resize: none;
+    /*resize: both;*/
     overflow: scroll;
 }
 

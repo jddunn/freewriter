@@ -22,7 +22,7 @@ body {
 
 #aboutLink {
 	font-size: 120%;
-	margin-top: .7%;
+	margin-top: 0%;
 	padding-left: 80%;
 	margin-left: 3.0%;
 	padding-bottom: 2%;
@@ -71,44 +71,46 @@ a:hover, a:active { text-decoration: none; color:black }
 }
 
 #menuButtons {
-	margin-top: -2%;
+	margin-top: -2.5%;
 	margin-left: 83%;
 	padding-top: 2%;
 	padding-right: 5%;
 }
 
 #largerMenuButtons {
-	margin-top: -.5%;
+	margin-top: -.3%;
 	margin-left: 83%;
-	padding-top: 1.1%;
+	padding-top: 3.5%;
 	padding-right: 5%;
 	padding-bottom: .4%;
 }
 
 #largerMenuButtons1 {
 	margin-left: 83%;
-	padding-top: .3%;
+	padding-top: .2%;
 	padding-right: 5%;
 }
 
 #fontBar {
 	margin-left: 83%;
-	padding-top:2.2%;
+	margin-top: -.1%;
+	padding-top:.6%;
 	padding-bottom:.55%;
 }
 
 #specialMenuButtons {
 	margin-left: 83%;
 	padding-right: 5%;
-	padding-top: 1.5%;
+	margin-top: .1%;
+	padding-top: .5%;
 	padding-bottom: .4%;
 }
 
 #specialMenuButtons1 {
 	margin-left: 83%;
 	padding-right: 5%;
-	margin-top: -.25%;
-	padding-top: .4%;
+	margin-top: -.5%;
+	padding-top: .7%;
 	padding-bottom: 1.5%;
 }
 
@@ -140,18 +142,19 @@ a:hover, a:active { text-decoration: none; color:black }
 	margin-left: 76.3%;
 }
 
-.textInput {
-	width: 55%;
+#textInput {
+	width: 100%;
 	height: 50%;
+	padding-top: .5%;
 	font-size: 120%;
 }
 
 #textWritten {
 	width: 66%;
 	font-size: 120%;
-	margin-top: -17.5%;
+	margin-top: -18%;
 	margin-left: 13%;
-	height: 415px;
+	height: 450px;
     resize: vertical;
     overflow: scroll;
     overflow-x: hidden;
@@ -162,9 +165,9 @@ a:hover, a:active { text-decoration: none; color:black }
 	display: none;
 	width: 66%;
 	font-size: 120%;
-	margin-top: -17.5%;
+	margin-top: -18%;
 	margin-left: 13%;
-	height: 415px;
+	height: 450px;
     resize: vertical;
     overflow: scroll;
     overflow-x: hidden;
@@ -172,14 +175,15 @@ a:hover, a:active { text-decoration: none; color:black }
 
 #cipherInput {
 	margin-left: 83%;
-	margin-top: -10%;
+	margin-top: -20.5%;
 	padding-right: 5%;
 	padding-bottom: 1%;
+	font-size: 105%;
 }
 
 #cipherButtons {
 	margin-left: 83%;
-	margin-top: -.5%;
+	margin-top: -.6%;
 	padding-right: 5%;
 	padding-bottom: 1%;
 }
@@ -197,4 +201,31 @@ a:hover, a:active { text-decoration: none; color:black }
 #but2 {
 	font-size: 80%;
 	width:25%;
+}
+
+
+
+#circleText {
+	margin-left: 83.15%;
+	font-size: 105%;
+	padding-top: .1%;
+	padding-right: 5%;
+	margin-top: -.5%;
+}
+
+
+#circleButtons {
+	margin-left: 83.15%;
+	padding-top: .5%;
+	font-size: 80%;
+	margin-top: 0%;
+
+}
+
+#circleCanvas {
+	width: 5%;
+	margin-left: 82%;
+	margin-top: -1%;
+	padding-top: 1%;
+	margin-top: 0%;
 }

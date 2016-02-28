@@ -16,15 +16,14 @@ http://stackoverflow.com/questions/14945371/using-loops-to-create-a-word-scrambl
 Also uses a caesar cipher library provided from: http://timseverien.com/articles/153-substitution-ciphering-in-javascript/.
 */
 
+
 "use strict";
 
+var textArea;					//	The text that the user is currently inputting 
 var fullTextArea = [];			//	The full text that the user has been writing
 var scrambledTextArea = [];
 var doubleSpacedOn = false;		//	Double-spacing?
 var scrambleTextOn = false;		//	Does the user want the text on the page to be scrambled?
-var textArea;					//	The text that the user is currently inputting 
-
-var scrambledString = "";
 
 var charLength = 0;				
 var charLengthCount = 0;
@@ -33,8 +32,10 @@ var printThis;					//	Print the last inputted text from the user on the page
 var printThisScrambled;			//	Adding the final touches to the super long string to be printed
 var scrambled = "";				//	The final scrambled string that will be printed in place of the normal text
 var scrambledSplit = "";
+var scrambledString = "";
 
 var keyCipher = "";				//	Caesear cipher key
+var cipherEntered = false;
 
 // var encryptedBox = "";
 // var decryptedBox = "";
@@ -48,9 +49,14 @@ var cipheredText = "";
 var decipheredText = "";
 var cipheredTextSplit = "";
 
+var oscillators = [];
+var collider;
+
+
 
 
 function textInput() {
+	//Creates canvas on screen for P5.js animation
 
    	textArea = document.getElementById('myText');
    	// textArea = document.getElementById('textWritten');
@@ -80,21 +86,12 @@ function textInput() {
    	fullTextArea.push(text);				//	Add text to the array
    	scrambledTextArea.push(text);
 
-
 	// encryptedBox.value = encryptStr(originalText,keyCipher);
 	// decryptedBox.value = decryptStr(encryptStr(originalText,keyCipher),keyCipher);
-
 	// keyCipher = document.getElementById("textWritten").value;
 
    	if (!scrambleTextOn) {
-   		// document.getElementById('textScrambled').innerHTML = "";		//	Clear the scrambled text
    		document.getElementById('textWritten').innerHTML = addText();
-   		
-  		//textWindow = document.getElementById('textWritten').innerHTML;
-  		//document.getElementById('textWritten').innerHTML = textWindow;
-  		//originalText = textWindow.value;
-  		  		// console.log(originalText);
-
 		//console.log(str);
    	} else {		
    		// document.getElementById('textWritten').innerHTML = "";			//	Clear the normal text 
@@ -104,6 +101,8 @@ function textInput() {
    		document.getElementById('textScrambled').innerHTML = formatScrambling();
    	}
 }
+
+
 
 function formatScrambling () {			//	Tabs some of the spliced, scrambled strings for formatting.
 		var scrambledTextHTML = document.getElementById('textScrambled').innerHTML;
@@ -252,10 +251,12 @@ function unscrambleText () {			//	Turn off text scrambling
 	textInput();
 }
 
+
 //CIPHER CODE
 function doClick(){
     keyCipher = document.getElementById("firstkey").value;
     alert("You have entered the cipher: " + " " + keyCipher + ".");
+    cipherEntered = true;
 
     // alert("You have entered the cipher key: " + " " + keyCipher + "." + " " + 
     //   	"Use this cipher key to decode any text you encrypt on this page.");
@@ -263,7 +264,6 @@ function doClick(){
     // var key2 = document.getElementById("secondkey").value;
     // textEncoded.value = decryptStr(encryptStr(originalText,key));
 }
-
 
 
 function cipherOn () {
@@ -282,8 +282,7 @@ function cipherOn () {
 
 function cipherOff () {
 	decryptedTextOn = true;
-	encryptedTextOn = false;
-	if (decryptedTextOn) {
+	if (decryptedTextOn && !encryptedTextOn) {
 		printDecryption();
 		document.getElementById('textWritten').innerHTML = decipheredText;
 		// var decryptedBox = document.getElementById("textWritten");
@@ -291,30 +290,44 @@ function cipherOff () {
 		// decryptedBox.value = decryptStr(encryptStr(originalText,keyCihper),keyCipher);
 		// return decryptedBox.value;
 		// document.getElementById('textWritten').innerHTML = decryptStr(str, keyCipher);
+	} 
+	if (decryptedTextOn && encryptedTextOn) {
+		printDecryption();
+		encryptedTextOn = false;
+		document.getElementById('textWritten').innerHTML = decipheredText;
 	}
 }
 
+
 function printEncryption () {
-	// originalText = printThis;
-	// caesarShift(text, shift);
 	// console.log(encryptedBox);
 	// document.getElementById('textWritten').innerHTML = str;
 	// textWindow.value = encryptStr(originalText,keyCipher);
 	// Cipher.keyRotate(text, key);
 	printThis = String(printThis);
 	cipheredText = Cipher.keyRotate(printThis, keyCipher);
+	encryptedTextOn = false;
 	return cipheredText;
-	//codedText = document.getElementById('textWritten').value;
 }
 
 function printDecryption () {
-	// originalText = allTextCopy;
-	// console.log(decryptedBox);
 	// document.getElementById('textWritten').innerHTML = str;
 	// var newText = "";
 	// console.log(newText);
-	decipheredText = Cipher.keyRotate(cipheredText, keyCipher, true);
-	return decipheredText;
+	if (decryptedTextOn && !encryptedTextOn) {
+		decipheredText = Cipher.keyRotate(cipheredText, keyCipher, true);
+		return decipheredText;
+	} 
+
+	if (decryptedTextOn && encryptedTextOn) {
+		// document.getElementById('myText').value = '';	   	//	Resets the entry box.
+   		// var text = textArea.value;
+		var stringToDecode = document.getElementById('textWritten').value;
+		decipheredText = Cipher.keyRotate(stringToDecode, keyCipher, true);
+		return decipheredText;
+	}
+
+
 }
 
 function formatCiphering () {		//	Tabs some of the spliced, scrambled strings for formatting.
@@ -325,8 +338,6 @@ function formatCiphering () {		//	Tabs some of the spliced, scrambled strings fo
 		// console.log(scrambledSplit);
 		return cipheredTextSplit; 
 }
-
-
 
 
 //	The code for getting the font interface to work, but it doesn't right now..

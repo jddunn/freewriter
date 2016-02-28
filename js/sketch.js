@@ -58,7 +58,7 @@ function turnOffAuto() {
 }
 
 function turnAutoFaster() {
-    if (userSpeed < 6) {      //Cut it off at six, otherwise it becomes counterproductive
+    if (userSpeed < 4) {      //Cut it off at six, otherwise it becomes counterproductive
       userSpeed = userSpeed + 1;
     // print(userSpeed);
       return userSpeed;

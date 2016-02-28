@@ -16,7 +16,7 @@ function setup()  {
   canvas.parent('circleCanvas');
   //canvas.position(displayWidth /1.2, displayHeight/1.6);
   // Initialize all objects
-  userSpeed = userSpeed + 4;
+  userSpeed = userSpeed + 3;
   // oscillatorCollide = new OscillatorCollide();
   for (var i = 0; i < userSpeed; i++) {
     oscillators.push(new Oscillator());

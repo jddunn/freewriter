@@ -58,17 +58,23 @@ function turnOffAuto() {
 }
 
 function turnAutoFaster() {
-    userSpeed = userSpeed + 1;
+    if (userSpeed < 6) {      //Cut it off at six, otherwise it becomes counterproductive
+      userSpeed = userSpeed + 1;
     // print(userSpeed);
-    return userSpeed;
+      return userSpeed;
+    } else {
+      return;
+    }
 }
 
 
 function turnAutoSlower() {
-  if (userSpeed >= 0) {
+  if (userSpeed >= 1) {
     userSpeed = userSpeed - 1;
     return userSpeed;
         // print(userSpeed);
 
+  } else {
+    return;
   }
 }

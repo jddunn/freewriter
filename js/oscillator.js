@@ -26,13 +26,13 @@ var Oscillator = function() {
     line(0, 0, x, y);
     ellipse(x, y, 16, 16);
     pop();
-    var mapX = x * 10;
-    var mapY = y * 10;
+    var mapX = x * 5;
+    // var mapY = y * 10;
     if (turnOnAutoBool) {
       if (mapX > canvas.width && cipherEntered == true) {
         cipherOn();
-        }
-      if (mapY > canvas.height && cipherEntered == true) {
+        } else {
+      // if (mapY > canvas.height && cipherEntered == true) {
         cipherOff();
       }
     }

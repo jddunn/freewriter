@@ -46,6 +46,7 @@ var decryptedTextOn = false;
 
 var cipheredText = "";
 var decipheredText = "";
+var cipheredTextSplit = "";
 
 function textInput() {
 
@@ -262,6 +263,7 @@ function cipherOn () {
 	decryptedTextOn = false;
 	if (encryptedTextOn) {
 		printEncryption();
+		formatCiphering();
 		document.getElementById('textWritten').innerHTML = cipheredText;
 		// document.getElementById('textWritten').innerHTML = encryptedBox.value;
 		// encryptedBox = encryptStr(originalText,keyCipher);
@@ -306,6 +308,18 @@ function printDecryption () {
 	decipheredText = Cipher.keyRotate(cipheredText, keyCipher, true);
 	return decipheredText;
 }
+
+function formatCiphering () {		//	Tabs some of the spliced, scrambled strings for formatting.
+		// var scrambledTextHTML = document.getElementById('textScrambled').innerHTML;
+   		// console.log(scrambledTextHTML);	
+   		var splitBy = ['a','?','.','='];
+		cipheredTextSplit = cipheredText.split(splitBy).join("\n");
+		// console.log(scrambledSplit);
+		return cipheredTextSplit; 
+}
+
+
+
 
 //	The code for getting the font interface to work, but it doesn't right now..
 function mod_selection (val1,val2) {	

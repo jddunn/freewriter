@@ -48,6 +48,8 @@ var cipheredText = "";
 var decipheredText = "";
 var cipheredTextSplit = "";
 
+
+
 function textInput() {
 
    	textArea = document.getElementById('myText');
@@ -172,6 +174,9 @@ function clearText () {											//	Clears the current message user is typing
 	document.getElementById('myText').value = "";	
 }
 
+
+function savePDF () {
+}
 
 //	Functions to align the text on the screen
 function centerTextAlign () {

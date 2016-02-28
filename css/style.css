@@ -149,7 +149,7 @@ a:hover, a:active { text-decoration: none; color:black }
 #textWritten {
 	width: 66%;
 	font-size: 120%;
-	margin-top: -17%;
+	margin-top: -17.5%;
 	margin-left: 13%;
 	height: 415px;
     resize: vertical;
@@ -162,7 +162,7 @@ a:hover, a:active { text-decoration: none; color:black }
 	display: none;
 	width: 66%;
 	font-size: 120%;
-	margin-top: -17.0%;
+	margin-top: -17.5%;
 	margin-left: 13%;
 	height: 415px;
     resize: vertical;

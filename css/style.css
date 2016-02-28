@@ -1,5 +1,5 @@
 #title {
-   margin-top: 4%;
+   margin-top: 3%;
    text-align : center;
    font-size: 250%;
    margin-left: -8%;
@@ -117,7 +117,7 @@ a:hover, a:active { text-decoration: none; color:black }
 
 #eraseButton {
 	margin-left: 83.0%;
-	margin-top: 2%;
+	margin-top: -2%;
 	padding-right: 5%;
 }
 
@@ -149,7 +149,7 @@ a:hover, a:active { text-decoration: none; color:black }
 #textWritten {
 	width: 66%;
 	font-size: 120%;
-	margin-top: -22.25%;
+	margin-top: -17%;
 	margin-left: 13%;
 	height: 415px;
     resize: vertical;
@@ -162,7 +162,7 @@ a:hover, a:active { text-decoration: none; color:black }
 	display: none;
 	width: 66%;
 	font-size: 120%;
-	margin-top: -22.25%;
+	margin-top: -17.0%;
 	margin-left: 13%;
 	height: 415px;
     resize: vertical;
@@ -170,3 +170,31 @@ a:hover, a:active { text-decoration: none; color:black }
     overflow-x: hidden;
 }
 
+#cipherInput {
+	margin-left: 83%;
+	margin-top: -10%;
+	padding-right: 5%;
+	padding-bottom: 1%;
+}
+
+#cipherButtons {
+	margin-left: 83%;
+	margin-top: -.5%;
+	padding-right: 5%;
+	padding-bottom: 1%;
+}
+
+#but {
+	font-size: 80%;
+	width:25%;
+}
+
+#but1 {
+	font-size: 80%;
+	width:25%;
+}
+
+#but2 {
+	font-size: 80%;
+	width:25%;
+}

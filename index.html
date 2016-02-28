@@ -11,6 +11,12 @@
   <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" />
   <link rel="stylesheet" href="css/style.css?v=1.0">
   <script src="js/script.js"></script>
+  <script src="js/cipher.js"></script>
+
+  <script type="text/javascript">
+  
+  </script>
+
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -51,17 +57,14 @@
   	</div>
 
  	<div id = "largerMenuButtons">
-  		<input type="button" value="secure" onclick="scrambleText(); scrollDown();"/>
+  		<input type="button" value="scramble" onclick="scrambleText(); scrollDown();"/>
   	</div>
 
 	<div id = "largerMenuButtons1">
-  		<input type="button" value="visible" onclick="unscrambleText() ; scrollDown();" />
+  		<input type="button" value="normal" onclick="unscrambleText() ; scrollDown();" />
   	</div>
 
-	<div id = "eraseButton">
-  		<input type="button" value="erase" onclick="eraseAll()" />
-	</div>
-
+	
 	<div id = "textWritten"> 
 	</div>
 
@@ -78,7 +81,31 @@
 
    	<div id = "clearButton"> 
 	  <input type="button" value="clear" onclick="clearText()"/>
-	</div>  	
+	  </div>  	
+
+  <div id = "eraseButton">
+      <input type="button" value="hide" onclick="eraseAll()" />
+  </div>
+
+
+  <div id = "cipherInput">
+  <!-- <label>Original String: </label><input type="text" id="original" /><br/> -->
+    <label>cipher key: </label><input type="password" id="firstkey" size = 3.8%/><br/>
+    <!-- <label>Confirm Key: </label><input type="password" id="secondkey"/><br/> -->
+    <!-- <label>Encrypted String: </label><input type="text" id="encrypted" /><br/> -->
+    <!-- <label>Decrypted String: </label><input type="text" id="decrypted"><br/>  -->
+
+  </div>
+
+
+
+  <div id = "cipherButtons">
+      <button id="but" onclick="doClick()">save</button>
+
+      <button id="but1" onclick="cipherOn()">e</button>
+
+      <button id="but2" onclick="cipherOff()">d</button>
+  </div>
 
 </body>
 </html>

@@ -26,8 +26,8 @@ var Oscillator = function() {
     line(0, 0, x, y);
     ellipse(x, y, 16, 16);
     pop();
-    var mapX = x * 30;
-    var mapY = y * 20;
+    var mapX = x * 40;
+    var mapY = y * 30;
     if (turnOnAutoBool) {
       if (mapX > canvas.width && cipherEntered == true) {
         cipherOn();

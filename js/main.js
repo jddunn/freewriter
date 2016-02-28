@@ -7,11 +7,12 @@ This script generates the text editor in the HTML / CSS files. There are basic f
 changing the page from single-space to double-space format and a few options for the font. Click the "start"
 button to scramble all the text currently written on the page, and click "visible" to see it normally again. 
 
-Credit to user Tayacan on dreamincode.net for providing a  
-framework for a  basic text editor.
+Credit to user Tayacan on dreamincode.net for providing a framework for a basic text editor.
 
 Credit to this stackoverflow thread for help with the scrambling algorithim:
 http://stackoverflow.com/questions/14945371/using-loops-to-create-a-word-scrambler.
+
+Credit to Daniel Shiffman for the code for the oscillating shapes
 
 Also uses a caesar cipher library provided from: http://timseverien.com/articles/153-substitution-ciphering-in-javascript/.
 */

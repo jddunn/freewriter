@@ -190,19 +190,14 @@ a:hover, a:active { text-decoration: none; color:black }
 
 #but {
 	font-size: 80%;
-	width:25%;
+	width:25.7%;
 }
 
-#but1 {
-	font-size: 80%;
-	width:25%;
-}
 
-#but2 {
-	font-size: 80%;
-	width:25%;
+#but3 {
+	font-size: 95.5%;
+	width:13.7%;
 }
-
 
 
 #circleText {
@@ -228,4 +223,32 @@ a:hover, a:active { text-decoration: none; color:black }
 	margin-top: -1%;
 	padding-top: 1%;
 	margin-top: 0%;
+}
+
+#lftBut {
+	width: 18.2%;
+}
+
+#rghtBut {
+	width: 18.2%;
+}
+
+#cntrBut {
+	width: 18.2%;
+}
+
+#ssBut {
+	width: 82%;
+}
+
+#dsBut {
+	width: 82%;
+}
+
+#scramBut {
+	width: 82%;
+}
+
+#unscramBut {
+	width: 82%;
 }

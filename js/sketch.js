@@ -52,7 +52,7 @@ function turnOnAuto() {
 
 function turnOffAuto() {
   if (cipherEntered == true) {
-    turnOffAutoBool = false;
+    turnOnAutoBool = false;
     cipherOff();
   }
 }

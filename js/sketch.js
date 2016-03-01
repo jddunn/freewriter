@@ -10,9 +10,10 @@ var canvas;
 var userSpeed = 0;
 
 var turnOnAutoBool = false;
+var decoding = false;
 
 function setup()  {
-  canvas = createCanvas(displayWidth/8.5, displayHeight/7.0);
+  canvas = createCanvas(displayWidth/8.6, displayHeight/7.0);
   canvas.parent('circleCanvas');
   //canvas.position(displayWidth /1.2, displayHeight/1.6);
   // Initialize all objects
@@ -78,3 +79,4 @@ function turnAutoSlower() {
     return false;
   }
 }
+

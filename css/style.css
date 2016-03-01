@@ -22,7 +22,7 @@ body {
 
 #aboutLink {
 	font-size: 120%;
-	margin-top: 0%;
+	margin-top: -1%;
 	padding-left: 80%;
 	margin-left: 3.0%;
 	padding-bottom: 2%;
@@ -78,9 +78,9 @@ a:hover, a:active { text-decoration: none; color:black }
 }
 
 #largerMenuButtons {
-	margin-top: -.3%;
+	margin-top: 2%;
 	margin-left: 83%;
-	padding-top: 3.5%;
+	padding-top: 1.0%;
 	padding-right: 5%;
 	padding-bottom: .4%;
 }
@@ -117,11 +117,6 @@ a:hover, a:active { text-decoration: none; color:black }
 #specialMenuButtons {
 }
 
-#eraseButton {
-	margin-left: 79.9%;
-	margin-top: -1.51%;
-	padding-right: 5%;
-}
 
 .textWrite {
 	margin-top: 1%;
@@ -142,6 +137,12 @@ a:hover, a:active { text-decoration: none; color:black }
 	margin-left: 76.3%;
 }
 
+
+#eraseButton {
+	margin-left: 79.9%;
+	margin-top: -6.51%;
+	padding-right: 5%;
+}
 #textInput {
 	width: 100%;
 	height: 50%;
@@ -175,7 +176,8 @@ a:hover, a:active { text-decoration: none; color:black }
 
 #cipherInput {
 	margin-left: 83%;
-	margin-top: -19.5%;
+	margin-top: -14.95%;
+	padding-top: .3%;
 	padding-right: 5%;
 	padding-bottom: 1%;
 	font-size: 105%;
@@ -201,7 +203,7 @@ a:hover, a:active { text-decoration: none; color:black }
 
 
 #circleText {
-	margin-left: 83.15%;
+	margin-left: 83.10%;
 	font-size: 105%;
 	padding-top: .1%;
 	padding-right: 5%;
@@ -251,4 +253,13 @@ a:hover, a:active { text-decoration: none; color:black }
 
 #unscramBut {
 	width: 82%;
+}
+
+
+#decodingText {
+	margin-left: 83.15%;
+	font-size: 140%;
+	padding-top: .4%;
+	padding-right: 5%;
+	margin-top: .5%;
 }

@@ -49,6 +49,7 @@ var decryptedTextOn = false;
 var cipheredText = "";
 var decipheredText = "";
 var cipheredTextSplit = "";
+var textAlreadyEncrypted = false;
 
 var oscillators = [];
 var collider;
@@ -268,35 +269,68 @@ function doClick(){
 
 
 function cipherOn () {
-	encryptedTextOn = true;
-	decryptedTextOn = false;
-	if (encryptedTextOn) {
-		printEncryption();
-		formatCiphering();
-		document.getElementById('textWritten').innerHTML = cipheredText;
-		// document.getElementById('textWritten').innerHTML = encryptedBox.value;
-		// encryptedBox = encryptStr(originalText,keyCipher);
-		// encryptStr(str,keyCipher);
-		// var encryptedBox = document.getElementById("textWritten");
+	// encryptedTextOn = true;
+	// decryptedTextOn = false;
+	// if (!encryptedTextOn && decryptedTextOn) {
+	// 	textAlreadyEncrypted = true;
+	// 	if (textAlreadyEncrypted) {
+	// 		printEncryption();
+	// 		console.log("YES");
+	// }
+	// 	document.getElementById('textWritten').innerHTML = cipheredText;
+	// 	// document.getElementById('textWritten').innerHTML = encryptedBox.value;
+	// 	// encryptedBox = encryptStr(originalText,keyCipher);
+	// 	// encryptStr(str,keyCipher);
+	// 	// var encryptedBox = document.getElementById("textWritten");
+	// }
+	if (!encryptedTextOn && !decryptedTextOn) {
+		encryptedTextOn = true;
+			if (encryptedTextOn = true) {
+			printEncryption();
+			console.log("YES");
+							decryptedTextOn = false;
+
+		}
+			document.getElementById('textWritten').innerHTML = cipheredText;
 	}
+
+	// if (!encryptedTextOn && decryptedTextOn) {
+	// 	encryptedTextOn = true;
+	// 		if (encryptedTextOn = true) {
+	// 		printEncryption();
+	// 	}
+	// 		document.getElementById('textWritten').innerHTML = cipheredText;
+	// }
+
 }
 
 function cipherOff () {
-	decryptedTextOn = true;
-	if (decryptedTextOn && !encryptedTextOn) {
-		printDecryption();
-		document.getElementById('textWritten').innerHTML = decipheredText;
-		// var decryptedBox = document.getElementById("textWritten");
-		// decryptStr(str1,keyCipher);
-		// decryptedBox.value = decryptStr(encryptStr(originalText,keyCihper),keyCipher);
-		// return decryptedBox.value;
-		// document.getElementById('textWritten').innerHTML = decryptStr(str, keyCipher);
-	} 
-	if (decryptedTextOn && encryptedTextOn) {
-		printDecryption();
-		encryptedTextOn = false;
-		document.getElementById('textWritten').innerHTML = decipheredText;
+	// console.log("off");
+	// decryptedTextOn = true;
+	if (!decryptedTextOn && encryptedTextOn) {
+			decryptedTextOn = true;
+			console.log("yes");
+			if (textAlreadyEncrypted) {
+				printDecryption();
+				encryptedTextOn = false;
+			}
+			
+	// }
+	// if (!decryptedTextOn && textIsEncrypted) {
+	// 	printDecryption();
+	// 	document.getElementById('textWritten').innerHTML = decipheredText;
+	// 	console.log("THISONE");
+	// 	textIsEncrypted = false;
+	// 	decryptedTextOn = true;
 	}
+	if (!decryptedTextOn && encryptedTextOn) {
+		decryptedTextOn = true;
+		if (decryptedTextOn) {
+				printDecryption();
+			
+		}
+	}
+	document.getElementById('textWritten').innerHTML = decipheredText;
 }
 
 
@@ -305,29 +339,65 @@ function printEncryption () {
 	// document.getElementById('textWritten').innerHTML = str;
 	// textWindow.value = encryptStr(originalText,keyCipher);
 	// Cipher.keyRotate(text, key);
-	printThis = String(printThis);
-	cipheredText = Cipher.keyRotate(printThis, keyCipher);
-	encryptedTextOn = false;
-	return cipheredText;
+	if (textAlreadyEncrypted = true) {
+		printThis = String(printThis);
+		cipheredText = Cipher.keyRotate(printThis, keyCipher);
+		console.log("THISONE")
+		return cipheredText;
+	}
+	// if (encryptedTextOn) {
+	// 	printThis = String(printThis);
+	// 	cipheredText = Cipher.keyRotate(printThis, keyCipher);
+	// 	encryptedTextOn = false;
+	// 	return cipheredText;
+	// }
 }
 
 function printDecryption () {
 	// document.getElementById('textWritten').innerHTML = str;
 	// var newText = "";
 	// console.log(newText);
-	if (decryptedTextOn && !encryptedTextOn) {
-		decipheredText = Cipher.keyRotate(cipheredText, keyCipher, true);
+	// console.log("DECRYPTING");
+
+	if (decryptedTextOn && textAlreadyEncrypted) {
+		console.log("DECODER IS WORKING");
+		var stringToDecode = document.getElementById('textWritten').innerHTML	;
+		decipheredText = Cipher.keyRotate(String(stringToDecode), keyCipher, true);
+		// decipheredText = Cipher.keyRotate(cipheredText, keyCipher, true);
+		decryptedTextOn = false;
+		// decryptedTextOn = false;
 		return decipheredText;
 	} 
 
 	if (decryptedTextOn && encryptedTextOn) {
 		// document.getElementById('myText').value = '';	   	//	Resets the entry box.
    		// var text = textArea.value;
-		var stringToDecode = document.getElementById('textWritten').value;
+   		console.log("DECRYPTING");
+		var stringToDecode = document.getElementById('textWritten').innerHTML;
 		decipheredText = Cipher.keyRotate(stringToDecode, keyCipher, true);
+		encryptedTextOn = false;
+		return decipheredText;
+	}
+	if (!decryptedTextOn && encryptedTextOn) {
+		// document.getElementById('myText').value = '';	   	//	Resets the entry box.
+   		// var text = textArea.value;
+   		console.log("DECRYPTING");
+		var stringToDecode = document.getElementById('textWritten').innerHTML;
+		decipheredText = Cipher.keyRotate(stringToDecode, keyCipher, true);
+		decryptedTextOn = false;
+		textIsEncrypted = false;
 		return decipheredText;
 	}
 
+
+}
+
+
+function decodingSomeText () {
+	var stringToDecode = document.getElementById('textWritten').innerHTML;
+	decipheredText = Cipher.keyRotate(stringToDecode, keyCipher, true);
+	document.getElementById('textWritten').innerHTML = decipheredText;
+	
 
 }
 

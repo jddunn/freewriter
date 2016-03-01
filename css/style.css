@@ -42,14 +42,14 @@ a:hover, a:active { text-decoration: none; color:black }
 #backLink {
 	text-align: center;
 	margin-left: -5%;
-	margin-top: 2%;
+	margin-top: 0%;
 	font-size: 135%;
 }
 
 #paragraphText {
 	text-align: center;
-	margin-left: 26.5%;
-	margin-top: 4%;
+	margin-left: 25%;
+	margin-top: 2%;
 	font-size: 125%;
 	width: 43%;
 }

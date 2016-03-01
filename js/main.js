@@ -224,7 +224,7 @@ function unscrambleText () {			//	Turn off text scrambling
 //CIPHER CODE
 function doClick(){
     keyCipher = document.getElementById("firstkey").value;
-    alert("You have entered the cipher: " + " "  +"'"+keyCipher+"'" + ".  " + "A few specific number-only ciphers do not work with the code, so please test the decryption first!");
+    alert("You have entered the cipher: " + " "  +"'"+keyCipher+"'" + ".  " + "A few specific cipher combinations do not work with the code, so please test your cipher by encrypting something, reloading, then entering the encoded message and hitting 'decode a text', before you ever want to save an encryption to come back to and decode later.");
     cipherEntered = true;
     return keyCipher;
 }

@@ -253,16 +253,16 @@ function unscrambleText () {			//	Turn off text scrambling
 }
 
 //CIPHER CODE
-function doClick(){
-    keyCipher = document.getElementById("firstkey").value;
-    alert("You have entered the cipher: " + " " + keyCipher + ".");
+// function doClick(){
+//     keyCipher = document.getElementById("firstkey").value;
+//     alert("You have entered the cipher: " + " " + +"'"+keyCipher+"'" + ".");
 
-    // alert("You have entered the cipher key: " + " " + keyCipher + "." + " " + 
-    //   	"Use this cipher key to decode any text you encrypt on this page.");
-    return keyCipher;
-    // var key2 = document.getElementById("secondkey").value;
-    // textEncoded.value = decryptStr(encryptStr(originalText,key));
-}
+//     // alert("You have entered the cipher key: " + " " + keyCipher + "." + " " + 
+//     //   	"Use this cipher key to decode any text you encrypt on this page.");
+//     return keyCipher;
+//     // var key2 = document.getElementById("secondkey").value;
+//     // textEncoded.value = decryptStr(encryptStr(originalText,key));
+// }
 
 
 
@@ -278,7 +278,7 @@ function cipherOn () {
 		// encryptStr(str,keyCipher);
 		// var encryptedBox = document.getElementById("textWritten");
 	}
-	
+
 
 }
 

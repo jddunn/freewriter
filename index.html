@@ -28,49 +28,34 @@
 	<div id = "title">
 		<div id = "border">
 	  	<h3>freewriter</h3> 
-	  	</div>
-  	</div>
+	  </div>
+  </div>
 
-  	<div id = "aboutLink">
-  		<a href="about.html">about</a>
-  	</div>
+  <div id = "aboutLink">
+    <a href="about.html">about</a>
+  </div>
 
 
-  	<div id = "fontBar">
-     <button id="lftBut" onclick="leftTextAlign()">lft</button>
-      <button id="cntrBut" onclick="centerTextAlign()">cntr</button>
-      <button id="rghtBut" onclick="rightTextAlign()">rght</button>
+  <div id = "fontBar">
+    <button id="lftBut" onclick="leftTextAlign()">lft</button>
+    <button id="cntrBut" onclick="centerTextAlign()">cntr</button>
+    <button id="rghtBut" onclick="rightTextAlign()">rght</button>
+  </div>
 
-    	<!-- <input type="button" value="lft" onclick="leftTextAlign()"/> -->
-  		<!-- <input type="button" value="cntr" onclick="centerTextAlign()"/> -->
-  		<!-- <input type="button" value="rght" onclick="rightTextAlign()"/> -->
-    	<!--  <input type="button" value="+" onclick="increaseFontSize"/>
-  		<input type="button" value="-" onclick="decreaseFontSize"/> -->
-  	</div>
+  <div id = "specialMenuButtons">
+    <button id="ssBut" onclick="singleSpaceOn()">single-spaced</button>
+  </div>
 
-  	<div id = "specialMenuButtons">
-  		<!-- <input type="button" value="single-space" onclick="singleSpaceOn()"/> -->
-      <button id="ssBut" onclick="singleSpaceOn()">single-spaced</button>
-
-  	</div>
-
-  	<div id = "specialMenuButtons1">
-<!--    		<input type="button" value="double-space" onclick="doubleSpaceOn()"/>
- -->
-       <button id="dsBut" onclick="doubleSpaceOn()">double-spaced</button>  	
-    </div>
+  <div id = "specialMenuButtons1">
+     <button id="dsBut" onclick="doubleSpaceOn()">double-spaced</button>  	
+  </div>
 
  	<div id = "largerMenuButtons">
-  		<!-- <input type="button" value="scramble" onclick="scrambleText(); scrollDown();"/> -->
-      <button id="scramBut" onclick="scrambleText(); scrollDown();">scramble</button>    
-
-  	</div>
+    <button id="scramBut" onclick="scrambleText(); scrollDown();">scramble</button>    
+  </div>
 
 	<div id = "largerMenuButtons1">
-<!--   		<input type="button" value="normal" onclick="unscrambleText() ; scrollDown();" />
- -->  	
-
-       <button id="unscramBut" onclick="unscrambleText(); scrollDown();">normal</button>    
+    <button id="unscramBut" onclick="unscrambleText(); scrollDown();">normal</button>    
   </div>
 	
 	<div id = "textWritten"> 
@@ -96,55 +81,32 @@
   </div>
 
   <div id = "cipherInput">
-  <!-- <label>Original String: </label><input type="text" id="original" /><br/> -->
     <label>cipher key: </label><input type="password" id="firstkey" size =3.0%/><br/>
-    <!-- <label>Confirm Key: </label><input type="password" id="secondkey"/><br/> -->
-    <!-- <label>Encrypted String: </label><input type="text" id="encrypted" /><br/> -->
-    <!-- <label>Decrypted String: </label><input type="text" id="decrypted"><br/>  -->
   </div>
-
 
   <div id = "cipherButtons">
-      <button id="but" onclick="doClick()">save</button>
-
-      <button id="but"  onclick="cipherOn()">e</button>
-
-      <button id="but" onclick="cipherOff()">d</button>
+    <button id="but" onclick="doClick()">save</button>
+    <button id="but"  onclick="cipherOn()">e</button>
+    <button id="but" onclick="cipherOff()">d</button>
   </div>
-
 
   <div id = "circleText">
         <label>auto-encrypting</label>
   </div>
 
   <div id = "circleButtons">
-      <button id="but3" onclick="turnOnAuto()">y</button>
-
-      <button id="but3" onclick="turnOffAuto()">n</button>
-
-      <button id="but3" onclick="turnAutoFaster()">+</button>
-      <button id="but3" onclick="turnAutoSlower()">-</button>
+    <button id="but3" onclick="turnOnAuto()">y</button>
+    <button id="but3" onclick="turnOffAuto()">n</button>
+    <button id="but3" onclick="turnAutoFaster()">+</button>
+    <button id="but3" onclick="turnAutoSlower()">-</button>
   </div>
 
   <div id = "decodingText">
-       <button id="dsBut" onclick="decodingSomeText()">decode a text?</button>    
+    <button id="dsBut" onclick="decodingSomeText()">decode a text?</button>    
   </div>
-<!-- 
-  <div id = "circleButtons">
-      <button id="but3" onclick="cipherOn()">y</button>
-      <button id="but3" onclick="cipherOff()">n</button>
-
-  </div> -->
-
-
-
-    <div id='circleCanvas'></div>
-    </div>
-
-
-
-
-
+  
+  <div id='circleCanvas'></div>
+  </div>
 
 </body>
 </html>

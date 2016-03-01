@@ -1,47 +1,38 @@
-// The Nature of Code
-// Daniel Shiffman
-// http://natureofcode.com
-
-// An array of objects
 var oscillators = [];
 var oscillatorCollide;
 
 var canvas;
 var userSpeed = 0;
 
-var turnOnAutoBool = false;
-var decoding = false;
+var turnOnAutoBool = false;       //  Does the user want the text to be auto-encrypted randomly?
+
 
 function setup()  {
-  canvas = createCanvas(displayWidth/8.6, displayHeight/7.0);
-  canvas.parent('circleCanvas');
+  canvas = createCanvas(displayWidth/8.6, displayHeight/7.0);       //  Move to far right of screen
+  canvas.parent('circleCanvas');        //  Push to div
   //canvas.position(displayWidth /1.2, displayHeight/1.6);
   // Initialize all objects
-  userSpeed = userSpeed + 3;
+  userSpeed = userSpeed + 3;      //  Start out with this number for now
   // oscillatorCollide = new OscillatorCollide();
   for (var i = 0; i < userSpeed; i++) {
     oscillators.push(new Oscillator());
   }
 }
 
+
 function draw() {
   background(254, 253, 251);
-    // oscillatorCollide.display();
-
+  // oscillatorCollide.display();
   // Run all objects
   for (var i = 0; i < userSpeed; i++) {
     oscillators.push(new Oscillator());
     oscillators[i].oscillate();
     oscillators[i].display();
-
   }
   // oscillatorCollide.ocillate();
-
- 
-
-    // velocity.y = velocity.y * -1;
-  
+  // velocity.y = velocity.y * -1;
 }
+
 
 function turnOnAuto() {
   if (cipherEntered == true) {
@@ -58,6 +49,7 @@ function turnOffAuto() {
   }
 }
 
+
 function turnAutoFaster() {
     if (userSpeed < 5) {      //Cut it off at six, otherwise it becomes counterproductive
       userSpeed = userSpeed + 1;
@@ -73,8 +65,7 @@ function turnAutoSlower() {
   if (userSpeed >  2) {
     userSpeed = userSpeed - 1;
     return userSpeed;
-        // print(userSpeed);
-
+    // print(userSpeed);
   } else {
     return false;
   }

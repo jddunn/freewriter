@@ -12,7 +12,7 @@ Credit to user Tayacan on dreamincode.net for providing a framework for a basic 
 Credit to this stackoverflow thread for help with the scrambling algorithim:
 http://stackoverflow.com/questions/14945371/using-loops-to-create-a-word-scrambler.
 
-Credit to Daniel Shiffman for the code for the oscillating shapes
+Credit to Daniel Shiffman for the code for the oscillating shapes from The Nature of Code
 
 Also uses a caesar cipher library provided from: http://timseverien.com/articles/153-substitution-ciphering-in-javascript/.
 */

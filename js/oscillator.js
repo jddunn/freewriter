@@ -1,13 +1,7 @@
-// The Nature of Code
-// Daniel Shiffman
-// http://natureofcode.com
-
 var Oscillator = function() {
   this.angle = createVector();
   this.velocity = createVector(random(-0.05, 0.05), random(-0.05, 0.05));
   this.amplitude = createVector(random(30, width/2), random(30, height/2));
-
-
 
   this.oscillate = function() {
     this.angle.add(this.velocity);

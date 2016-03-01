@@ -224,7 +224,7 @@ function unscrambleText () {			//	Turn off text scrambling
 //CIPHER CODE
 function doClick(){
     keyCipher = document.getElementById("firstkey").value;
-    alert("You have entered the cipher: " + " " + keyCipher + ". " + "Unfortunately, a few ciphers will not work, such as 'ab'. Please test your cipher!");
+    alert("You have entered the cipher: " + " " + keyCipher + ". " + "A few specific number-only ciphers do not work with the code, so please test the decryption first!");
     cipherEntered = true;
     return keyCipher;
 }
@@ -307,9 +307,9 @@ function decodingSomeText () {
 function formatCiphering () {		//	Tabs some of the spliced, scrambled strings for formatting.
 		// var scrambledTextHTML = document.getElementById('textScrambled').innerHTML;
    		// console.log(scrambledTextHTML);	
-   		var splitBy = ['a','?','.','='];
+   		var splitBy = ['>','<','?','.','='];
 		cipheredTextSplit = cipheredText.split(splitBy).join("\n");
-		// console.log(scrambledSplit);
+		console.log(scrambledSplit);
 		return cipheredTextSplit; 
 }
 

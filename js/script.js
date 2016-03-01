@@ -1,4 +1,4 @@
-/* 
+s/* 
 Web Scrambling Word Processor
 Coded by: Johnny Dunn
 
@@ -278,6 +278,8 @@ function cipherOn () {
 		// encryptStr(str,keyCipher);
 		// var encryptedBox = document.getElementById("textWritten");
 	}
+	
+
 }
 
 function cipherOff () {

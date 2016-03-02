@@ -232,85 +232,101 @@ function doClick(){
 function cipherOn () {
 	if (!encryptedTextOn && !decryptedTextOn) {
 		encryptedTextOn = true;
-			if (encryptedTextOn = true) {
+			if (encryptedTextOn == true) {
 			printEncryption();
-			console.log("YES");
-							decryptedTextOn = false;
-
+			console.log("e button works");
+			decryptedTextOn = false;
 		}
 			document.getElementById('textWritten').innerHTML = cipheredText;
 	}
 }
 
+
 function cipherOff () {
-	if (!decryptedTextOn && encryptedTextOn) {
-			decryptedTextOn = true;
-			console.log("yes");
-			if (textAlreadyEncrypted) {
-				printDecryption();
-				encryptedTextOn = false;
-			}
-	}
-	if (!decryptedTextOn && encryptedTextOn) {
-		decryptedTextOn = true;
-		if (decryptedTextOn) {
-				printDecryption();
-			
-		}
-	}
+	// if (!decryptedTextOn && encryptedTextOn) {
+	// 		decryptedTextOn = true;
+	// 		// console.log("yes");
+	// 				console.log("yes");
+	// 			}
+
+	// 		if (textAlreadyEncrypted && decryptedTextOn) {
+	// 			printDecryption();
+	// 			console.log("ITS");
+	// 			encryptedTextOn = false;
+	// 		}
+		
+	// 		else 
+	// if (encryptedTextOn) {
+				// decryptedTextOn = true;
+	encryptedTextOn = true;
+	printDecryption();
+			// } else {
+
+			// }
 	document.getElementById('textWritten').innerHTML = decipheredText;
 }
 
 
 function printEncryption () {
-	if (textAlreadyEncrypted = true) {
+	// if (!textAlreadyEncrypted) {
 		printThis = String(printThis);
 		cipheredText = Cipher.keyRotate(printThis, keyCipher);
-		console.log("THISONE")
+		console.log(cipheredText);
 		return cipheredText;
 	}
-}
 
 function printDecryption () {
-	if (decryptedTextOn && textAlreadyEncrypted) {
-		console.log("DECODER IS WORKING");
-		var stringToDecode = document.getElementById('textWritten').innerHTML	;
-		decipheredText = Cipher.keyRotate(String(stringToDecode), keyCipher, true);
-		decryptedTextOn = false;
-		return decipheredText;
-	} 
-
-	if (decryptedTextOn && encryptedTextOn) {
-   		console.log("DECRYPTING");
+	if (!decryptedTextOn && encryptedTextOn) {
 		var stringToDecode = document.getElementById('textWritten').innerHTML;
-		decipheredText = Cipher.keyRotate(stringToDecode, keyCipher, true);
+		stringToDecode = stringToDecode.split('/<br>').join('');
+		stringToDecode = stringToDecode.split('<br>').join('');
+		decipheredText = Cipher.keyRotate(String(stringToDecode), keyCipher, true);
+		console.log(decipheredText);
+		decryptedTextOn = false;
+		encryptedTextOn = false;
+		textAlreadyEncrypted = false;
+		return decipheredText;
+
+	} else { 
+		var stringToDecode = document.getElementById('textWritten').innerHTML;
+		stringToDecode = stringToDecode.split('/<br>').join('');
+		stringToDecode = stringToDecode.split('<br>').join('');
+		decipheredText = Cipher.keyRotate(String(cipheredText), keyCipher, true);
+		decryptedTextOn = false;
 		encryptedTextOn = false;
 		return decipheredText;
-	}
-	if (!decryptedTextOn && encryptedTextOn) {
-   		console.log("DECRYPTING");
-		var stringToDecode = document.getElementById('textWritten').innerHTML;
-		decipheredText = Cipher.keyRotate(stringToDecode, keyCipher, true);
-		decryptedTextOn = false;
-		textIsEncrypted = false;
-		return decipheredText;
-	}
+		}
+	if (textAlreadyEncrypted) {
+				console.log("WE ARE DECODING");
+				console.log(stringToDecode);
+			}
 }
 
 
 function decodingSomeText () {
-	var stringToDecode = document.getElementById('textWritten').innerHTML;
-	decipheredText = Cipher.keyRotate(stringToDecode, keyCipher, true);
-	document.getElementById('textWritten').innerHTML = decipheredText;
+	
+	// var stringToDecode = document.getElementById('textWritten').innerHTML;
+	// decipheredText = Cipher.keyRotate(stringToDecode, keyCipher, true);
+	// document.getElementById('textWritten').innerHTML = decipheredText;
+	textAlreadyEncrypted = true;
+}
+
+function turnDecoderOff () {
+	
+	//var stringToDecode = document.getElementById('textWritten').innerHTML;
+	//decipheredText = Cipher.keyRotate(stringToDecode, keyCipher, true);
+	// document.getElementById('textWritten').innerHTML = printThis;
+	textAlreadyEncrypted = false;
+	document.getElementById('textWritten').innerHTML = printThis;
 }
 
 function formatCiphering () {		//	Tabs some of the spliced, scrambled strings for formatting.
-		// var scrambledTextHTML = document.getElementById('textScrambled').innerHTML;
-   		// console.log(scrambledTextHTML);	
-   		var splitBy = ['>','<','?','.','='];
-		cipheredTextSplit = cipheredText.split(splitBy).join("\n");
-		console.log(scrambledSplit);
-		return cipheredTextSplit; 
+	
+	// var scrambledTextHTML = document.getElementById('textScrambled').innerHTML;
+   	// console.log(scrambledTextHTML);	
+   	var splitBy = ['>','<','?','.','='];
+	cipheredTextSplit = cipheredText.split(splitBy).join("\n");
+	return cipheredTextSplit; 
 }
 
 //	The code for getting the font interface to work, but it doesn't right now..

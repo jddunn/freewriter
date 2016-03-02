@@ -8,7 +8,7 @@ var turnOnAutoBool = false;       //  Does the user want the text to be auto-enc
 
 
 function setup()  {
-  canvas = createCanvas(displayWidth/8.6, displayHeight/7.0);       //  Move to far right of screen
+  canvas = createCanvas(displayWidth/8.6, displayHeight/6.5);       //  Move to far right of screen
   canvas.parent('circleCanvas');        //  Push to div
   //canvas.position(displayWidth /1.2, displayHeight/1.6);
   // Initialize all objects

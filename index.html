@@ -101,10 +101,17 @@
     <button id="but3" onclick="turnAutoSlower()">-</button>
   </div>
 
-  <div id = "decodingText">
-    <button id="dsBut" onclick="decodingSomeText()">decode a text?</button>    
+
+
+  <div id = "decodingTextLabel">
+    <label>decoding prevs text?</label><br/>
   </div>
-  
+
+  <div id = "decodingTextButtons">
+    <button id="but" onclick="turnDecoderOff(); cipherOff();">y</button>
+    <button id="but"  onclick="decodingSomeText(); cipherOn();">n</button>
+  </div>
+
   <div id='circleCanvas'></div>
   </div>
 

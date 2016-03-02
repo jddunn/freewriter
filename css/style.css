@@ -176,7 +176,7 @@ a:hover, a:active { text-decoration: none; color:black }
 
 #cipherInput {
 	margin-left: 83%;
-	margin-top: -14.95%;
+	margin-top: -16.95%;
 	padding-top: .3%;
 	padding-right: 5%;
 	padding-bottom: 1%;
@@ -256,10 +256,19 @@ a:hover, a:active { text-decoration: none; color:black }
 }
 
 
-#decodingText {
+#decodingTextLabel {
 	margin-left: 83.15%;
-	font-size: 150%;
+	font-size: 105%;
 	padding-top: .4%;
 	padding-right: 5%;
 	margin-top: .4%;
+}
+
+#decodingTextButtons {
+	margin-left: 83.15%;
+	padding-top: .5%;
+	font-size: 92.25%;
+	margin-top: 0%;
+	width: 9.0%;
+	padding-right: 0%;
 }

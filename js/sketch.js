@@ -43,6 +43,7 @@ function turnOnAuto() {
 
 
 function turnOffAuto() {
+  alert("If you get stuck on an encryption after auto-encrypting is turned off, you need to hit the 'd' or 'e' buttons multiple times in different combinations until your text reutrns to normal!")
   if (cipherEntered == true) {
     turnOnAutoBool = false;
     cipherOff();

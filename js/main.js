@@ -186,6 +186,8 @@ function scrambler () {						//	Scrambles all the text on the page except for wh
          	scrambled += printThisScrambled.charAt(charIndex);
          	// console.log(scrambled);
          	printThisScrambled =  printThisScrambled.substr(0, charIndex) + printThisScrambled.substr(charIndex + 1);
+            scrollDown();
+
          }
               // console.log(printThisScrambled);
 				scrambled = String(scrambled);
@@ -264,6 +266,7 @@ function cipherOff () {
 
 			// }
 	document.getElementById('textWritten').innerHTML = decipheredText;
+	scrollDown();
 }
 
 
@@ -318,6 +321,7 @@ function turnDecoderOff () {
 	// document.getElementById('textWritten').innerHTML = printThis;
 	textAlreadyEncrypted = false;
 	document.getElementById('textWritten').innerHTML = printThis;
+	scrollDown();
 }
 
 function formatCiphering () {		//	Tabs some of the spliced, scrambled strings for formatting.

@@ -76,11 +76,12 @@ function textInput() {
    	scrambledTextArea.push(text);
    	if (!scrambleTextOn) {
    		document.getElementById('textWritten').innerHTML = addText();
+   		// scrambled = "";
    	} else {		
    		scrambler();	
    		// formatScrambling();
    		// console.log(scrambledSplit);
-   		document.getElementById('textScrambled').innerHTML = formatScrambling();
+   		document.getElementById('textScrambled').innerHTML = scrambled;
    	}
 }
 
@@ -174,6 +175,7 @@ function singleSpaceOn () {				//	Prints out the text again as single-spaced
 }
 
 
+
 //	SCRAMBLER
 function scrambler () {						//	Scrambles all the text on the page except for what the uesr is
 	printThisScrambled = printThis;			//	currently typing
@@ -182,15 +184,18 @@ function scrambler () {						//	Scrambles all the text on the page except for wh
 		 // whatsThisTextScrambled = scrambledTextArea.toString();
 		 var charIndex = Math.floor(Math.random() * printThisScrambledLength/20);
 		 //console.log(whatsThisTextScrambled.length)
-	 	    //var textToBeScrambled = whatsThisText;
-         	scrambled += printThisScrambled.charAt(charIndex);
-         	// console.log(scrambled);
-         	printThisScrambled =  printThisScrambled.substr(0, charIndex) + printThisScrambled.substr(charIndex + 1);
-            scrollDown();
-
+	 	 //var textToBeScrambled = whatsThisText;
+         scrambled += printThisScrambled.charAt(charIndex);
+         printThisScrambled =  printThisScrambled.substr(0, charIndex) + printThisScrambled.substr(charIndex + 1);
+         // console.log(scrambled);
+         scrambled = scrambled.split('/<br>').join('');
+		 scrambled =  scrambled.split('<br>').join('');
+		 scrambled =  scrambled.split('<>').join('');c
+		 // scrambled = printThisScrambled;
+         scrollDown();
          }
               // console.log(printThisScrambled);
-				scrambled = String(scrambled);
+				// scrambled = String(scrambled);
 				// formatScrambling();
 				//scrambled =  scrambled;
 		     	// var splitBy = ['<', '>', '<>'];
@@ -198,14 +203,6 @@ function scrambler () {						//	Scrambles all the text on the page except for wh
 		     	return scrambled;
 }
 
-function formatScrambling () {			//	Tabs some of the spliced, scrambled strings for cleaner formatting.
-		var scrambledTextHTML = document.getElementById('textScrambled').innerHTML;
-   		// console.log(scrambledTextHTML);	
-   		var splitBy = ['<', '>', '<>'];
-		scrambledSplit = scrambled.split(splitBy).join("\t\t\t\t\t\t\t\t\t\t\t");
-		// console.log(scrambledSplit);
-		return scrambledSplit; 
-}
 
 function scrambleText () {				//	Turn on text scrambling feature
 	scrambleTextOn = true;     	
@@ -221,6 +218,7 @@ function unscrambleText () {			//	Turn off text scrambling
 	document.getElementById("textWritten").style.display="block";
 	textInput();
 }
+
 
 
 //CIPHER CODE
@@ -242,7 +240,6 @@ function cipherOn () {
 			document.getElementById('textWritten').innerHTML = cipheredText;
 	}
 }
-
 
 function cipherOff () {
 	// if (!decryptedTextOn && encryptedTextOn) {
@@ -268,7 +265,6 @@ function cipherOff () {
 	document.getElementById('textWritten').innerHTML = decipheredText;
 	scrollDown();
 }
-
 
 function printEncryption () {
 	// if (!textAlreadyEncrypted) {
@@ -332,6 +328,7 @@ function formatCiphering () {		//	Tabs some of the spliced, scrambled strings fo
 	cipheredTextSplit = cipheredText.split(splitBy).join("\n");
 	return cipheredTextSplit; 
 }
+
 
 //	The code for getting the font interface to work, but it doesn't right now..
 function mod_selection (val1,val2) {	

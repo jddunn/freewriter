@@ -1,9 +1,9 @@
 /* 
-Web Scrambling Word Processor
+Scrambling / Encrypting Web Text Editor
 Coded by: Johnny Dunn
 
 Description:
-This script generates the text editor in the HTML / CSS files. There are basic formatting options, such as 
+This is the main script for scrambling / encrypting web text editor. There are basic formatting options, such as 
 changing the page from single-space to double-space format and a few options for the font. Click the "start"
 button to scramble all the text currently written on the page, and click "visible" to see it normally again. 
 
